@@ -118,6 +118,11 @@ using Cycle-Consistent Adversarial Networks](https://arxiv.org/pdf/1703.10593.pd
 - [Improved Techniques for Training GANs, 2016](https://arxiv.org/abs/1606.03498).
 - [DCGAN Paper, 2016](https://arxiv.org/abs/1511.06434v2).
 
+**Very realistic face generation**:
+
+- [StyleGAN, 2019](https://arxiv.org/abs/1710.10196/).
+- [StyleGAN 2, 2020](https://paperswithcode.com/method/stylegan2).
+- [StyleGAN 3, 2021](https://nvlabs.github.io/stylegan3/).
 
 ## Authorship
 
