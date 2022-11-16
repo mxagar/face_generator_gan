@@ -1,6 +1,6 @@
 # Face Generation with a Convolutional Generative Adversarial Network (GAN)
 
-This repository contains a Convolutional Generative Adversarial Network (GAN) that generates faces based on the [CelebFaces Attributes Dataset (CelebA)](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html). A subset of the dataset is used, which can be downloaded [from here](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/November/5be7eb6f_processed-celeba-small/processed-celeba-small.zip). The subset, which consists of 89,931 images, has been processed to contain only of `64 x 64 x 3` cropped faces without any annotations. Here's a sample of 16 images:
+This repository contains a Convolutional Generative Adversarial Network (GAN) that generates faces based on the [CelebFaces Attributes Dataset (CelebA)](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html). A subset of the dataset is used, which can be downloaded [from here](https://s3.amazonaws.com/video.udacity-data.com/topher/2018/November/5be7eb6f_processed-celeba-small/processed-celeba-small.zip). The subset, which consists of 89,931 images, has been processed to contain only `64 x 64 x 3` cropped faces without any annotations. Here's a sample of 16 images:
 
 <p align="center">
   <img src="./assets/face_inputs.jpg" alt="Some processed samples from the CelebA faces dataset.">
@@ -8,7 +8,7 @@ This repository contains a Convolutional Generative Adversarial Network (GAN) th
 
 The project is implemented with [Pytorch](https://pytorch.org/) and it uses materials from the [Udacity Computer Vision Nanodegree](https://www.udacity.com/course/computer-vision-nanodegree--nd891), which can be obtained in their original (non-implemented) form in [project-face-generation](https://github.com/mxagar/deep-learning-v2-pytorch/tree/master/project-face-generation).
 
-Regarding the *current* results, I would say they look like faces :sweat_smile:
+Regarding the *current* results, I would say that they look like faces :sweat_smile:
 
 <p align="center">
   <img src="./assets/face_outputs_epoch_50.jpg" alt="Some generated samples in the epoch 50.">
@@ -30,7 +30,7 @@ Table of Contents:
 
 ## How to Use This
 
-In order to use the model, you need to install the [dependencies](#dependencies) and execute the notebook [`dlnd_face_generation.ipynb`](dlnd_face_generation.ipynb), which is the main application file that defines and trains the network.
+In order to use the model, you need to install the [dependencies](#dependencies) and execute the notebook [`dl_face_generation.ipynb`](dl_face_generation.ipynb), which is the main application file that defines and trains the network.
 
 Next, I give a more detailed description on the contents and the usage.
 
@@ -70,13 +70,13 @@ When the notebook is executed, several other artifacts are generated:
 
 ### Dependencies
 
-You should create a python environment (e.g., with [conda](https://docs.conda.io/en/latest/)) and install the dependencies listed in the [requirements.txt](requirements.txt) file.
+You should create a python environment (e.g., with [conda](https://docs.conda.io/en/latest/)) and install the dependencies listed in the [`requirements.txt`](requirements.txt) file.
 
 A short summary of commands required to have all in place is the following:
 
 ```bash
-conda create -n text-gen python=3.6
-conda activate text-gen
+conda create -n face-gan python=3.6
+conda activate face-gan
 conda install pytorch -c pytorch 
 conda install pip
 pip install -r requirements.txt
@@ -92,7 +92,10 @@ TBD.
 
 :construction:
 
-TBD.
+- Leaky ReLU
+- Smooth real loss
+- Strided convolutions without pooling
+- Batch normalization
 
 ## Improvements and Next Steps
 
@@ -107,12 +110,12 @@ In case I have time, I will try to improve the results applying these items:
 - [ ] Vary the learning rate during training; example: [Original CycleGAN repository](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
 - [ ] Try other weight initializations, e.g., the [Xavier Initialization](https://prateekvjoshi.com/2016/03/29/understanding-xavier-initialization-in-deep-neural-networks/).
 - [ ] Currently, label smoothing is implemented but deactivated; activate it.
-- [ ] Read thoroughly and the techniques commented in the the paper [Improved Techniques for Training GANs](https://arxiv.org/abs/1606.03498).
+- [ ] Read thoroughly and the techniques commented in the paper [Improved Techniques for Training GANs](https://arxiv.org/abs/1606.03498).
 - [ ] I have barely varied the hyperparameters! I should systematically search in the paramater space; e.g.:
   - [ ] The number of epochs.
   - [ ] The `batch_size`; check [this Standford / Karpathy article](https://cs231n.github.io/neural-networks-3/#hyper).
   - [ ] The `beta` values for the optimizer; check [this article by Sebastian Ruder](https://ruder.io/optimizing-gradient-descent/index.html#adam).
-  - [ ] The size of the random/noise vector.
+  - [ ] The size of the random/noise vector `z_size`.
   - [ ] The slope of the leaky ReLU.
   - [ ] etc.
 - [ ] Address the bias in the dataset: many white, blonde and female faces are generated.
