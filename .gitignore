@@ -7,3 +7,6 @@ __pycache__
 __MACOSX
 checkpoints_gan
 train_samples.pkl
+submission
+*.html
+*.zip
