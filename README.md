@@ -6,7 +6,7 @@ This repository contains a Convolutional Generative Adversarial Network (GAN) th
   <img src="./assets/face_inputs.jpg" alt="Some processed samples from the CelebA faces dataset.">
 </p>
 
-The project is implemented with [Pytorch](https://pytorch.org/) and it uses materials from the [Udacity Computer Vision Nanodegree](https://www.udacity.com/course/computer-vision-nanodegree--nd891), which can be obtained in their original (non-implemented) form in [project-face-generation](https://github.com/mxagar/deep-learning-v2-pytorch/tree/master/project-face-generation).
+The project is implemented with [Pytorch](https://pytorch.org/) and it uses materials from the [Udacity Deep Learning Nanodegree](https://www.udacity.com/course/deep-learning-nanodegree--nd101), which can be obtained in their original (non-implemented) form in [project-face-generation](https://github.com/mxagar/deep-learning-v2-pytorch/tree/master/project-face-generation).
 
 Regarding the *current* results, I would say that they look like faces :sweat_smile:
 
